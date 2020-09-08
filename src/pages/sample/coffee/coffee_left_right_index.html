@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .index {
+            width: 100%;
+        }
+        .nav {
+            float: left;
+            width: 25%;
+            position: fixed;
+        }
+
+        .nav .nav-top .nav-top-logo {
+            float: left;
+            width: 20%;
+        }
+
+        .nav .nav-top .nav-top-logo img {
+            width: 36px;
+            float: right;
+            margin-top: 8px;
+        }
+
+        .nav .nav-top .nav-top-menu {
+            float: left;
+            width: 80%;
+            margin-left: -40px;
+        }
+
+        .nav .nav-top .nav-top-menu ul li {
+            float: left;
+            margin-left: 15px;
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .nav .nav-top .nav-top-more img {
+            margin-top: 16px;
+            padding-left: 5px;
+        }
+
+        .nav .nav-body .ct {
+            margin-top: 50px;
+            margin-left: 50px;
+            text-align: left;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 30px;
+        }
+
+        .nav .nav-body .button {
+            margin-top: 50px;
+            margin-left: 50px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        .nav .nav-body .button img {
+            vertical-align: middle;
+        }
+
+        .nav .nav-body .button .login {
+            color: #00A862;
+        }
+
+        .nav .nav-body .button .reg {
+            color: #00A862;
+            border: 1px solid #00A862;
+            border-radius: 48px;
+            padding: 6px 18px;
+            margin-left: 10px;
+            //box-sizing: border-box;
+            //display: inline-block;
+        }
+
+
+        .content {
+           width: 75%;
+           float: right;
+        }
+
+        .content .content-ad {
+           margin-bottom: 20px;
+        }
+
+        .content .content-ad img {
+           height: 400px;
+           width: 100%;
+        }
+
+        .content .content-promotion {
+           border: 1px dashed #ddd;
+           padding: 5px;
+        }
+
+        .content .content-promotion img {
+           width: 32%;
+           margin-left: 5px;
+        }
+
+        .content .content-login p {
+           margin-top: 25px;
+           line-height: 30px;
+        }
+
+        .content .content-login h2 {
+           font-weight: 400;
+           font-family: "Gotham", Helvetica, Arial, PingFangSC-Regular, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+           font-size: 20px;
+        }
+
+        .content .content-login .left {
+           width: 40%;
+        }
+
+        .content .content-login .desc {
+           color: rgba(0, 0, 0, 0.56);
+        }
+
+        .content .content-login .button {
+           border: 1px solid #00A862;
+           border-radius: 48px;
+           padding: 6px 18px;
+           color: #00A862;
+        }
+
+        .content .content-login .more {
+           color: #00A862;
+        }
+
+        .content .content-login .right {
+           float: right;
+           margin-top: -140px;
+        }
+
+        .content .content-login .right  img {
+           margin-left: -250px;
+        }
+
+        .content .content-gift {
+           margin-top: 40px;
+           background-color: #f7f7f7; //rgba(0, 0, 0, 0.56);//#e2dede;//#f5f3f3;
+           text-align: center;
+           height: 400px;
+        }
+
+        .content .content-gift h2 {
+           padding-top: 40px;
+        }
+
+        .content .content-gift .desc {
+            padding-bottom: 50px;
+        }
+
+        .content .content-gift ul {
+            background-color: #f7f7f7;
+        }
+
+        .content .content-gift ul li {
+           float: left;
+           display: block;
+           width: 22%;
+           padding: 0px 10px;
+           background-color: #f7f7f7;
+        }
+
+        .content .content-gift ul li a {
+           border-radius: 2px;
+           background: #fff;
+           box-sizing: border-box;
+           box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.12);
+           display: block; //inline-block
+        }
+
+        .content .content-gift ul li img {
+            height: 72px;
+            margin-top: -30px;
+        }
+
+        .content .content-gift ul li .title {
+            font-size: 18px;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.87);
+            margin-top: 5px;
+        }
+
+        .content .content-gift ul li .ct {
+            font-size: 14px;
+            margin-bottom: 18px;
+            line-height: 25px;
+            color: rgba(0, 0, 0, 0.56);
+        }
+
+        .content .content-gift ul li .more {
+            font-size: 12px;
+            color: #C2A661;
+            font-weight: 400;
+            opacity: 0.7;
+        }
+
+        .content .content-house {
+            height: 550px;
+        }
+
+        .content .content-house .title h2 {
+            text-align: center;
+            font-weight: 400;
+        }
+
+        .content .content-house .title p {
+            text-align: center;
+            color: rgba(0, 0, 0, 0.56);
+        }
+
+        .content .content-house .scroll {
+            float: left;
+            width: 32%;
+            height: 218px;
+            position: relative;
+            padding: 0px 3px;
+            box-shadow: 0 0px 1px 0px rgba(0, 0, 0, 0.12);
+        }
+
+        .content .content-house .scroll .tag {
+            left: 4px;
+            top: 6px;
+            position: absolute;
+            background: #C2A661;
+            color: #fff;
+            padding: 4px 12px;
+        }
+
+        .content .content-house .scroll span {
+            text-align: left;
+            font-weight: normal;
+            line-height: 35px;
+
+        }
+
+        .content .content-house .scroll img {
+            height: 168px;
+            width: 100%;
+        }
+
+        .content .content-footer {
+            text-align: center;
+            margin-top: 40px;
+
+        }
+
+        .content .content-footer a {
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="index">
+    <div class="nav">
+        <div class="nav-top">
+            <div class="nav-top-logo">
+                <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/logo.svg" alt="星巴克">
+            </div>
+            <div class="nav-top-menu">
+                <ul>
+                    <li><a>门店</a></li>
+                    <li><a>我的账单</a></li>
+                    <li><a>菜单</a></li>
+                </ul>
+            </div>
+            <div class="nav-top-more">
+                <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-hamburger.svg">
+            </div>
+        </div>
+        <div class="nav-body">
+            <div class="ct">
+                <span>
+                心情惬意，来杯咖啡吧 ☕
+                </span>
+            </div>
+            <div class="button">
+                <img src="https://www.starbucks.com.cn/assets/icons/icon-account.svg">
+                <span class="login">登录</span>
+                <span class="reg">注册</span>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-ad">
+            <img src="https://www.starbucks.com.cn/assets/images/featured/2020autumn1/xingshan-food.jpg" >
+        </div>
+        <div class="content-promotion">
+            <a><img src="https://www.starbucks.com.cn/images/pages/tmall-2020-06-29-zh.jpg"></a>
+            <a><img src="https://www-static.chinacdn.starbucks.com.cn/prod/images/pages/starbucks-design-studio-web-china.jpg"></a>
+            <a><img src="https://www-static.chinacdn.starbucks.com.cn/prod/images/pages/homepage-career-cn.jpg"></a>
+        </div>
+        <div class="content-login">
+            <div class="left">
+                <h2>星享俱乐部</h2>
+                <p class="desc">开启您的星享之旅，星星越多、会员等级越高、好礼越丰富。<a class="more">了解更多 ›</a></p>
+                <p >
+                    <a class="button">注册</a>
+                    <a class="button">登录</a>
+                </p>
+            </div>
+            <div class="right">
+                <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/logo-msr-new.svg">
+            </div>
+        </div>
+        <div class="content-gift">
+            <h2>星巴克精选</h2>
+            <p class="desc">在星巴克天猫旗舰店发现更多咖啡心意</p>
+            <ul>
+                <li>
+                    <a>
+                        <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/tmall-card-01.png">
+                        <p class="title">会员星礼包</p>
+                        <p class="ct">星享卡新升级<br>更多心意好礼</p>
+                        <p class="more">了解更多 ›</p>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/tmall-card-02.png">
+                        <p class="title">星礼卡</p>
+                        <p class="ct">用一份心礼<br>让心意相随</p>
+                        <p class="more">了解更多 ›</p>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/tmall-eticket.png">
+                        <p class="title">电子产品券</p>
+                        <p class="ct">心意<br>从这一杯开始</p>
+                        <p class="more">了解更多 ›</p>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/tmall-reserve.png">
+                        <p class="title">咖啡生活</p>
+                        <p class="ct">星巴克<br>用心制作</p>
+                        <p class="more">了解更多 ›</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="content-house">
+            <div class="title">
+                <h2>1912 派克街 | 咖啡星讲堂</h2>
+                <p>了解更多星巴克咖啡文化</p>
+            </div>
+            <div >
+                <div class="scroll">
+                    <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/coffeehouse-coffee-cultivation-kv.jpg">
+                    <span class="tag">咖啡知识</span>
+                    <span>咖啡的起源与培植</span>
+                </div>
+
+                <div class="scroll">
+                    <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/coffeehouse-4-fundamentals-kv.jpg">
+                    <span class="tag">咖啡品鉴</span>
+                    <span>咖啡调制</span>
+                </div>
+
+                <div class="scroll">
+                    <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/coffeehouse-roast-story-kv.jpg">
+                    <spa class="tag">咖啡知识</spa>
+                    <span>咖啡烘焙</span>
+                </div>
+
+                <div class="scroll">
+                    <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/coffeehouse-pour-over-kv.jpg">
+                    <span class="tag">咖啡品鉴</span>
+                    <span>手冲咖啡</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="content-footer">
+            <span>
+                <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402000253" target="_blank">
+                  <img width="10" height="10" src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/icpicon.png">&nbsp;沪公网安备 31010402000253号
+                </a>
+            </span>
+            |
+            <a href="http://www.beian.miit.gov.cn" target="_blank">沪ICP备17003747号</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
